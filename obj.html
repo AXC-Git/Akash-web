@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+
+        // var a={
+        //     fName:"Ravi",
+        //     lName:"Chorasia",
+        //     City:"Mumbai",
+        //     Email:"baa@gmail.com",
+        //     Age:"20",
+        //     flang:["C","HTML","Bangla"],
+        //     salary:function(){
+        //         return 156156;
+        //     },
+        //     full:function(){
+        //         return this.fName+" "+this.lName;
+        //     },
+        //     living:{ 'city' :'Kolkata','Name':'666'
+        // },
+
+        // };
+
+        // document.write(" "+a+"<br />");
+        // console.log(a);
+        // console.log(a.Name);
+        // document.write(a.Name+"<br />");
+        // document.write(a.flang[2]+"<br />");
+        // document.write(a.salary()+"<br />");
+        // document.write(a.full()+"<br />");
+        // document.write(a.living.Name);
+
+        var a=new Object();
+
+        a.name="Ram";
+        a.city=51;
+        a.country="India";
+        a.age="Mumbai";
+
+        // document.write(a['name']+"<br />");
+        // document.write(a.name);
+
+        for (key in a){
+            document.write(key+":"+a[key]+"<br />");
+        }
+
+    </script>
+</body>
+</html>

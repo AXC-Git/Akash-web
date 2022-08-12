@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .static{
+        background: yellow;
+        color: brown;
+        padding: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .relative{
+        position: relative;
+        top: 150%;
+        left: 150px;
+        border: 2px solid rgb(190, 54, 54);
+        padding: 20px;
+        width: 80%;
+        height: 1000px;
+
+    }
+
+    .fixed{
+            
+            position: fixed;
+            width: 200px;
+            height: 150px;
+            background: lightgreen;
+            top: 0;
+            z-index: -1;
+    }
+
+    .sticky{
+        position: sticky;
+        width: 250px;
+        padding: 15px;
+        font-size: 15px;
+        left: 250px;
+        top: 0;
+        border: 2px solid peru;
+    }
+
+    .absolute{
+              position: absolute;
+              width: 200px;
+              height: 150px;
+              background: black;
+              top: 200px;
+              right: 50px;
+
+    }
+</style>
+<body>
+    <div class="static">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos cumque officiis maxime repudiandae laborum, reprehenderit ad! Fuga eum ab quia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aut fugit, porro deleniti sequi, quo magni similique impedit assumenda asperiores, modi natus quod veritatis! Rerum, sed temporibus. Commodi nostrum id nesciunt eligendi assumenda, nemo pariatur. Dolorem, dolore? Quos sunt, voluptate architecto maiores facilis illum corporis veniam facere fuga earum totam!
+        </p>
+    </div>
+    <div class="sticky">
+        <p> Sticky position </p>
+    </div>
+    <div class="relative"> <p>This is relative</p>
+    <div class="absolute">Relative  </div>
+    </div>
+    <div class="fixed">       </div>
+    <div class="">   </div>
+</body>
+</html>

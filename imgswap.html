@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swap</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        h2{
+            font-weight: bold;
+            width: auto;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+        .container{
+            background: transparent;
+            width: 800px;
+            height: 500px;
+            display: inline-block;
+           
+            
+        }
+        .class{
+            width: 90px;
+            height: 90px;
+            padding: 5px 10px 5px 10px;
+            border: 1px solid grey;
+            border-radius: 2px;
+            cursor: pointer;
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Image Swap</h2>
+    <div class="container">
+        <img src="/images/image/1.jpg" onmouseover="ch1()" alt="" class="class" id="t2">
+        <img src="/images/image/2.jpg" onmouseover="ch2()" alt="" class="class" id="t3">
+        <img src="/images/image/3.jpg" onmouseover="ch3()" alt="" class="class" id="t4">
+        <img src="/images/image/4.jpg" onmouseover="ch4()" alt="" class="class" id="t5">
+        <img src="/images/image/5.jpg" onmouseover="ch5()" alt="" class="class" id="t6">
+        <img src="" alt="" width="300" height="200" id="container">
+    </div>
+    <script>
+
+        function ch1(){
+            var a=document.getElementById("t2");
+            var b=document.getElementById("container");
+            b.src=a.src;
+         }
+
+         function ch2(){
+            var c=document.getElementById("t3");
+            var d=document.getElementById("container");
+            d.src=c.src;
+         }
+         function ch3(){
+            var a=document.getElementById("t4");
+            var b=document.getElementById("container");
+            b.src=a.src;
+         }
+         function ch4(){
+            var a=document.getElementById("t5");
+            var b=document.getElementById("container");
+            b.src=a.src;
+         }
+         function ch5(){
+            var a=document.getElementById("t6");
+            var b=document.getElementById("container");
+            b.src=a.src;
+         }
+
+    </script>
+</body>
+
+</html>

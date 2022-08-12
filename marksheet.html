@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Mall Shops</title>
+</head>
+<body>
+    <script>
+        //var a=prompt("Enter your no.");
+        // if (a<=100 && a>=80) {
+        //     document.write("Excellent:- "+a);
+        // }
+        // else if (a<=79 && a>=60){
+        //     document.write("1st div:- "+a);
+        // }
+        // else if (a<=59 && a>=45){
+        //     document.write("2nd div:- "+a);
+        // }
+        // else if (a<=44 && a>=33){
+        //     document.write("3rd div :-"+a);
+        // }
+        // else{
+        //     document.write("fail " +a);
+        // }
+        // var day=prompt("Enter day");
+            
+        // switch (day){
+
+        //     case '0': document.write("Today is Tuesday");
+        //     break;
+        //     case '1': document.write("Today is Wednesday");
+        //     break;
+        //     case '2': document.write("Today is Thursday");
+        //     break;
+        //     case '3': document.write("Today is Friday");
+        //     break;
+        //     default: document.write("wrong");
+        // }
+
+        // var a=prompt("Enter no");
+        // switch (true) {
+        //     case (a>=80 && a<=100): document.write("Excellent ");
+        //     break;
+
+        //     case (a>=60 && a<=79): document.write("1st Div ");
+        //     break;
+
+        //     case (a>=44 && a<=59): document.write("2nd Div ");
+        //     break;
+
+        //     case (a>=34 && a<=43): document.write("3rd Div ");
+        //     break;
+
+        //     case (a<=33): document.write("Fail");
+        //     break;
+
+        //     default: document.write("wrong input");
+        // }
+
+        
+        var c=Number(prompt("enter above 1"));
+        var tot=0;
+        var discount;
+        var net;
+        var shpname="--------Gucci---------";
+
+
+        if (c<=20000 && c>=1) {
+            tot=tot+c ;
+            discount=(5/100)*c;
+            net=tot-discount;
+            document.write(shpname +"<br />"+"Total Amount:-"+tot+"<br />" +"Discount:- "+discount+"<br />" +"Net Amount:-"+ net);
+
+        }
+        else if (c<=80000 && c>20000){
+            tot=tot+c ;
+            discount=(10/100)*c;
+            net=tot-discount;
+            document.write(shpname +"<br />"+"Total Amount:-"+tot+"<br />" +"Discount:- "+discount+"<br />" +"Net Amount:-"+ net);
+
+        }
+        else if (c>80000) {
+
+            tot=tot+c ;
+            discount=(15/100)*c;
+            net=tot-discount;
+            document.write(shpname +"<br />"+"Total Amount:-"+tot+"<br />" +"Discount:- "+discount+"<br />" +"Net Amount:-"+ net);
+        }
+        else {
+            document.write("Enter only prices");
+        }
+
+    </script>
+</body>
+</html>

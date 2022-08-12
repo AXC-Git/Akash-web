@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-area .slider{
+            width: 100%;
+            position: relative;
+        }
+        .slide{
+            display: none;
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 2px;
+            min-height: 200px;
+            background-repeat: no-repeat;
+            background-image: url('https://www.bing.com/th?id=OIP.BYuUgtA7HtAtQ9zVb_5QsQHaE6&w=151&h=101&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2');
+        }
+        .active{
+            display: block;
+        }
+        h1{
+            text-align: center;
+            margin-top: 97px;
+        }
+
+        .prev, .next{
+            top: 26%;
+            position: absolute;
+            padding-left: 3px;
+            font-size: 10px;
+            cursor: grab;
+
+        }
+        .next{
+            right: 0;
+        }
+        .indic{
+            position: absolute;
+            top: 60%;
+            width: 60%;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            width: 100%;
+            margin: 0 5px;
+        }
+
+
+        ul li{
+            width: 10px;
+            height: 8px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-left: 5px;
+            float: left;
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+        ul li.active{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider-area">
+        <div class="slider">
+            <div class="slide active"><h1>Slide 1</h1></div>
+            <div class="slide"><h1>Slide 2</h1></div>
+            <div class="slide"><h1>Slide 3</h1></div>
+            <div class="slide"><h1>Slide 4</h1></div>
+            <div class="slide"><h1>Slide 5</h1></div>
+        </div>
+    </div>
+    <button class="prev" id="prev">Prev</button>
+    <button class="next" id="next">Next</button>
+
+    <div class="indic">
+        <ul id="ul">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var slide=document.getElementsByClassName("slide");
+        var t_slide=slide.length;
+        var ul=document.getElementById("ul");
+        var dots=ul.getElementByTagName("li");
+        var i, count=0;
+        // console.log(slide.length);
+        document.getElementById("next").addEventListener("click",function(){
+            count++;
+             nxtslide();
+        });
+
+        document.getElementById("prev").addEventListener("click",function(){
+            count--;
+            nxtslide();
+        });
+        function nxtslide(){
+            if (count >=t_slide) {
+                count=0; 
+            }
+            if (count<0){
+                count=t_slide-1;
+            }
+            for (i = 0;i < t_slide;i++) {
+                slide[i].classList.remove("active");
+                dots[i].classList.remove("active");
+                
+            }
+            slide[count].classList.add("active");
+            dots[count].classList.add("active");
+       
+        }
+
+        // alert("leaked by NUll0048");
+        // var sp=prompt("Type 500");
+        // function makeid(){
+        //     var text="";
+        //     var pos="1234567890ABCDEFGHIJKLMNOQRSTUVWXYZ";
+        //     for (var i = 0; i <14; i++)
+            // text+=pos.charAt(Math.floor(Math.random()*pos.length));
+            // return text;
+        // }
+            function main(){
+                document.getElementById("InputBoxName").value=makeid();
+                document.getElementById("SubmitButtonName").click();
+            }
+
+    </script>
+</body>
+</html>
